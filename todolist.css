@@ -1,0 +1,89 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%; min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                      url('https://i.pinimg.com/originals/f1/14/1e/f1141edf46b06052939f8fa1c890feb6.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo-app { width: 100%; max-width: 480px; }
+
+/* تأثير الزجاج العام */
+.header-glass, .pomodoro-glass, .input-group, .filter-glass, #list-container li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #f5dff7;
+}
+
+/* تنسيق الهيدر واللوجو */
+.header-glass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f886a0;
+    letter-spacing: 0.5px;
+}
+
+.header-glass h2 { font-size: 18px; opacity: 0.8; }
+
+/* الـ Pomodoro */
+#timer { font-size: 50px; text-align: center; font-weight: bold; margin-bottom: 10px; color: #fff; }
+.pomo-controls { display: flex; justify-content: center; gap: 10px; }
+.pomo-controls button {
+    padding: 8px 25px; border-radius: 12px; border: none; cursor: pointer;
+    background: white; font-weight: bold; transition: 0.3s;
+}
+
+/* المدخلات */
+.input-group label { display: block; font-size: 14px; color: #ef8eb3; margin-bottom: 8px; }
+.input-group input { width: 100%; background: transparent; border: none; outline: none; color: white; font-size: 16px; }
+
+#add-btn {
+    width: 100%; padding: 15px; border-radius: 40px; border: none;
+    background: linear-gradient(90deg, #ef8eb3, #f5dff7);
+    color: #1a1a1a; font-weight: bold; cursor: pointer; margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+#add-btn:hover { transform: scale(1.02); opacity: 0.9; }
+
+/* الفلاتر */
+.filter-glass { display: flex; justify-content: space-around; padding: 10px; }
+.filter-btn { cursor: pointer; padding: 8px 18px; border-radius: 15px; font-size: 14px; transition: 0.3s; }
+.filter-btn.active { background: rgba(0, 0, 0, 0.4); color: #fff; }
+
+/* القائمة */
+#list-container { list-style: none; }
+#list-container li { display: flex; justify-content: space-between; align-items: center; padding: 15px; }
+.completed { text-decoration: line-through; opacity: 0.6; border-left: 5px solid #2ecc71 !important; }
+.later-task { border-left: 5px solid #f1c40f !important; }
+
+input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(1); }

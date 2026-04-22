@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretary Time - Productivity Hub</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="todo-app">
+        <div class="header-glass">
+            <div class="logo-area">
+                <span class="logo-icon">⏳</span>
+                <span class="logo-text">Secretary Time</span>
+            </div>
+            <h2>To-Do List</h2>
+        </div>
+
+        <div class="pomodoro-glass" id="pomo-container">
+            <div id="timer">25:00</div>
+            <div class="pomo-controls">
+                <button id="start-pomo">Start</button>
+                <button id="reset-pomo">Reset</button>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>What's your plan?</label>
+            <input type="text" id="task" placeholder="E.g. Studying OS">
+        </div>
+
+        <div class="input-group">
+            <label>Remind me at:</label>
+            <input type="time" id="alarm">
+        </div>
+
+        <button id="add-btn">Add Task</button>
+
+        <div class="filter-glass">
+            <span class="filter-btn active" data-filter="all">All</span>
+            <span class="filter-btn" data-filter="complete">Done</span>
+            <span class="filter-btn" data-filter="later">Later</span>
+        </div>
+
+        <ul id="list-container"></ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
